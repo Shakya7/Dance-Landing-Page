@@ -120,15 +120,14 @@ span{
     flex-direction: column;
     gap: 2rem;
 }
+
 .last-section{
-   
     padding:2%;
-}
-.last-section{
     display:flex;
     justify-content: space-between;
     align-items: center;
     gap:20px;
+    width:100%;
     
 }
 .skills-content{
@@ -137,6 +136,7 @@ span{
 .text-container{
     width:40%;
 }
+
 .skills-list{
     display: flex;
     flex-direction: column;
@@ -163,8 +163,41 @@ span{
 .skills-list span{
     width:10px;
     height:10px;
-    background-color: black;
+    background-color: grey;
     border-radius: 50%;
+}
+.active-dot{
+    position: relative;
+    background-color: black;
+}
+.active-list{
+    color:black;
+}
+.text-container{
+    position: relative;
+    left:-8rem;
+}
+.text-container p{
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+
+}
+
+.text-container-img img{
+    width:300px;
+    height:140px;
+
+}
+
+.vertical-line{
+    position: absolute;
+   left:4px;
+    width:1px;
+    height:200px;
+    background-color: grey;
+}
+.arrow img{
+    width:3rem;
 }
 
 
@@ -172,6 +205,16 @@ span{
     .text-section-lower{
         position: relative;
         left:0;
+    }
+}
+
+@media(max-width:978px){
+    .text-container{
+        position: relative;
+        left:2px;
+    }
+    .arrow{
+        display: none;
     }
 }
 
@@ -195,6 +238,13 @@ span{
         left:2%;
         width:10%;
     }
+    .last-section{
+        display: flex;
+        flex-direction: column;
+    }
+    .text-container{
+        align-self: center;
+    }
 
 }
 @media (max-width:500px){
@@ -208,6 +258,11 @@ span{
         gap:0;
     }
 
+}
+@media (max-width:440px){
+    .text-container img{
+        width:10rem;
+    }
 }
 @media (max-width:300px){
     .text-section-higher, .text-section-lower h1{
@@ -227,5 +282,8 @@ span{
     }
     .main-section>:last-child{
         align-self: center;
+    }
+    .text-container img{
+        width:5rem;
     }
 }
